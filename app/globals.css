@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient 6s infinite linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes floatEffect {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+  50% { transform: translateY(-10px) rotate(2deg); opacity: 0.3; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+}
+
+.welcome-text {
+  position: absolute;
+  font-size: 7rem; /* Increase size */
+  font-weight: bold;
+  opacity: 0.2; /* Increase brightness */
+  color: rgba(255, 255, 255, 0.3); /* White but slightly transparent */
+  text-transform: uppercase;
+  user-select: none;
+  filter: blur(3px) drop-shadow(0px 0px 10px rgba(255,255,255,0.3)); /* Adds a glowing effect */
+  animation: floatingText 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatingText {
+  0% { transform: translateY(0px); opacity: 0.2; }
+  100% { transform: translateY(10px); opacity: 0.4; }
+}
+
