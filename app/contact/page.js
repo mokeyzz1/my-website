@@ -1,58 +1,78 @@
 "use client";
-import { useState } from "react";
+import Link from "next/link";
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-
-    const formData = new FormData(form);
-    const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    });
-
-    if (response.ok) {
-      setSubmitted(true);
-      form.reset();
-    }
-  };
-
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-bold text-gray-900">Contact Me</h1>
-      <p className="text-lg text-gray-600 mt-2">Fill out the form below, and I&apos;ll get back to you.</p>
+    <>
+      {/* Navigation */}
+      <nav className="nav">
+        <div className="container">
+          <div className="nav-inner">
+            <Link href="/" className="nav-logo">
+              <span className="nav-name-full">Moses K.</span>
+              <span className="nav-name-short">MK</span>
+            </Link>
+            <div className="nav-links">
+              <Link href="/#work" className="nav-link">Work</Link>
+              <Link href="/#about" className="nav-link">About</Link>
+              <Link href="/contact" className="nav-link">Contact</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-      {submitted ? (
-        <p className="text-green-600 mt-4">Message sent successfully! I&apos;ll reply soon.</p>
-      ) : (
-        <form onSubmit={handleSubmit} className="bg-white shadow-lg p-6 rounded-lg mt-6 w-full max-w-lg">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Name
-            <input type="text" name="name" required className="mt-1 p-2 w-full border rounded" />
-          </label>
+      <main>
+        <section className="section" style={{ paddingTop: "140px" }}>
+          <div className="container">
+            <h1 className="section-title" style={{ marginBottom: "48px" }}>Get In Touch</h1>
+            <div className="contact-grid">
+              <div className="contact-info">
+                <h3>Let&apos;s Work Together</h3>
+                <p style={{ marginBottom: "24px" }}>
+                  Have a project in mind? Let&apos;s talk about how I can help.
+                </p>
+                <div className="contact-links">
+                  <a href="https://github.com/mokeyzz1" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    → GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/mosesbkoroma/" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    → LinkedIn
+                  </a>
+                </div>
+              </div>
+              <form
+                action="https://formspree.io/f/xblglvaa"
+                method="POST"
+                className="contact-form"
+              >
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" className="brutal-btn primary" style={{ alignSelf: "flex-start" }}>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Email
-            <input type="email" name="email" required className="mt-1 p-2 w-full border rounded" />
-          </label>
-
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Message
-            <textarea name="message" rows="4" required className="mt-1 p-2 w-full border rounded"></textarea>
-          </label>
-
-          <button 
-            type="submit" 
-            className="mt-4 px-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
-        </form>
-      )}
-    </main>
+        {/* Footer */}
+        <footer className="footer">
+          <div className="container">
+            <div className="footer-content">
+              <p className="footer-text">© {new Date().getFullYear()} Moses Koroma</p>
+              <div className="footer-links">
+                <a href="https://github.com/mokeyzz1" target="_blank" rel="noopener noreferrer" className="footer-link">
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mosesbkoroma/" target="_blank" rel="noopener noreferrer" className="footer-link">
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </>
   );
 }

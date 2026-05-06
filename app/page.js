@@ -1,355 +1,296 @@
 "use client";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const [filter, setFilter] = useState("all");
+
+  const projects = [
+    {
+      slug: "athletedesk",
+      title: "AthleteDesk",
+      category: "product",
+      desc: "A purpose-built CRM for sports agencies — replacing disconnected spreadsheets with a unified platform for recruiting, roster management, brand deals, and team coordination.",
+      tech: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
+      link: "https://athletedesk.io",
+    },
+    {
+      slug: "trackhub",
+      title: "TrackHub",
+      category: "product",
+      desc: "Mobile app for tracking college track & field athletes, meets, and performances. Features leaderboards, athlete profiles, head-to-head comparisons, and meet results.",
+      tech: ["React Native", "Expo", "Supabase", "PostgreSQL"],
+      link: "https://apps.apple.com/us/app/trackhub-collegiate-t-f/id6758220972",
+    },
+    {
+      slug: "drug-reviews",
+      title: "Drug Reviews NLP",
+      category: "data",
+      desc: "Analyzed 215K patient reviews to identify underperforming medications and quantify $27M+ in revenue risk from drug non-adherence. Built an interactive Streamlit dashboard.",
+      tech: ["Python", "SQL", "NLTK", "Streamlit"],
+      link: "https://mokeyzz1-drug-reviews-nlp-app-d9dls4.streamlit.app",
+    },
+    {
+      slug: "olist-analysis",
+      title: "Olist Multi-Seller Analysis",
+      category: "data",
+      desc: "Discovered that multi-seller orders drop customer satisfaction by 32% (4.18 → 2.86). Statistical analysis of 99K orders with ROI-backed recommendations.",
+      tech: ["Python", "pandas", "scipy", "matplotlib"],
+      link: "https://github.com/mokeyzz1/olist-multiseller-analysis",
+      external: true,
+    },
+    {
+      slug: "ecommerce-funnel",
+      title: "E-Commerce Funnel Analysis",
+      category: "data",
+      desc: "Analyzed 109.9M events from 5.3M users to identify conversion bottlenecks. Found 46.3% cart abandonment and weekend outperformance patterns.",
+      tech: ["Python", "DuckDB", "pandas", "statsmodels"],
+      link: "https://github.com/mokeyzz1/ecommerce-funnel-analysis",
+      external: true,
+    },
+  ];
+
+  const filters = [
+    { key: "all", label: "All" },
+    { key: "product", label: "Products" },
+    { key: "data", label: "Data" },
+  ];
+
+  const filtered = filter === "all"
+    ? projects
+    : projects.filter(p => p.category === filter);
+
   return (
-    <main className="relative flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center overflow-hidden">
-      
-      <section id="home" className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
-  
-  
- {/* Floating Background Text */}
-<div className="absolute inset-0 overflow-hidden">
-  {["top-10 left-10", "top-1/3 left-1/4", "bottom-10 right-10", "top-2/3 right-1/4"].map((position, index) => (
-    <motion.span
-      key={index}
-      className={`absolute text-[8vw] font-extrabold text-gray-800 opacity-10 ${position}`}
-      initial={{ opacity: 0.1, x: 0, y: 0 }}
-      animate={{
-        opacity: [0.1, 0.4, 0.1], // Fade in and out for echo effect
-        x: [0, 10, -10, 0], // Slight side-to-side movement
-        y: [0, -10, 10, 0], // Slight up-down movement
-      }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} // Continuous looping
-    >
-      WELCOME
-    </motion.span>
-  ))}
-</div>
-
-  {/* Profile Image + Social Links */}
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }} 
-    animate={{ opacity: 1, y: 0 }} 
-    transition={{ duration: 1 }} 
-    className="text-center flex flex-col items-center"
-  >
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1, delay: 0.3 }}
-      className="relative"
-    >
-      <Image 
-        src="/profile.jpg" 
-        alt="Moses Koroma" 
-        width={160} 
-        height={160} 
-        className="rounded-full shadow-lg border-4 border-white"
-      />
-    </motion.div>
-
-   {/* Social Media Icons */}
-<div className="flex space-x-4 mt-3">
-  <motion.a 
-    whileHover={{ scale: 1.1 }} 
-    href="https://github.com/yourgithub" 
-    target="_blank"
-    className="icon-glow"
-  >
-    <Image 
-      src="/github.svg" 
-      alt="GitHub" 
-      width={32} 
-      height={32} 
-      className="text-white opacity-90"
-    />
-  </motion.a>
-  
-  <motion.a 
-    whileHover={{ scale: 1.1 }} 
-    href="https://linkedin.com/in/yourlinkedin" 
-    target="_blank"
-    className="icon-glow"
-  >
-    <Image 
-      src="/linkedin.svg" 
-      alt="LinkedIn" 
-      width={32} 
-      height={32} 
-      className="text-white opacity-90"
-    />
-  </motion.a>
-</div>
-  </motion.div>
-
-  {/* Name + Title */}
-  <motion.h1 
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5, duration: 1 }}
-  className="text-6xl font-extrabold text-white drop-shadow-lg"
->
-  Moses Koroma
-</motion.h1>
-  <motion.p 
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1, duration: 1 }}
-    className="text-lg text-gray-700 mt-2"
-  >
-    Aspiring Data Analyst | Python | SQL | Data Visualization
-  </motion.p>
-
-  {/* Scroll Down Indicator */}
-  <motion.a 
-    href="#about"
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 2, duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-    className="absolute bottom-10 text-gray-600 hover:text-blue-600 cursor-pointer"
-  >
-    <p className="text-sm">Scroll Down</p>
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-    </svg>
-  </motion.a>
-</section>
-
-      {/* About Section */}
-      <section id="about" className="w-full py-24 bg-white flex flex-col md:flex-row items-center justify-center px-12">
-        
-        {/* Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: 1 }} 
-          className="w-full md:w-1/3 flex justify-center"
-        >
-          <Image 
-            src="/profile.jpg" 
-            alt="Moses Koroma" 
-            width={350} 
-            height={350} 
-            className="rounded-xl shadow-lg object-cover"
-          />
-        </motion.div>
-
-        {/* About Content */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: 1 }} 
-          className="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-0 space-y-5"
-        >
-          <h2 className="text-5xl font-bold text-gray-900">About Me</h2>
-          <p className="text-gray-600 mt-3 text-lg leading-relaxed max-w-lg">
-            Hi, I’m Moses Koroma—a Data Analyst and graduate student passionate about uncovering insights through data. 
-            I have a background in Management Information Systems and am currently pursuing a Master’s in Data Analytics.
-          </p>
-          <p className="mt-3 text-gray-600 leading-relaxed">
-            I specialize in Python, SQL, Machine Learning, and Data Visualization, applying these skills to solve real-world problems. 
-            As a Student Data Analyst, I work with institutional data to support data-driven decision-making and process improvements.
-          </p>
-          <p className="mt-3 text-gray-600 leading-relaxed">
-            I’m constantly learning, refining my analytical skills, and exploring new ways to make data more accessible and impactful. 
-            My goal is to leverage data insights to drive smarter business decisions and meaningful change.
-          </p>
-
-          {/* Key Highlights */}
-          <div className="flex justify-center md:justify-start mt-6 space-x-10">
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-gray-900">2+</h3>
-              <p className="text-md text-gray-600">Years in Data Analytics</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-gray-900">1</h3>
-              <p className="text-md text-gray-600">Internship</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-gray-900">15+</h3>
-              <p className="text-md text-gray-600">Completed Projects</p>
+    <>
+      {/* Navigation */}
+      <nav className="nav">
+        <div className="container">
+          <div className="nav-inner">
+            <Link href="/" className="nav-logo">
+              <span className="nav-name-full">Moses K.</span>
+              <span className="nav-name-short">MK</span>
+            </Link>
+            <div className="nav-links">
+              <Link href="#work" className="nav-link">Work</Link>
+              <Link href="#about" className="nav-link">About</Link>
+              <Link href="/contact" className="nav-link">Contact</Link>
             </div>
           </div>
-
-          {/* View Résumé Button */}
-          <Link href="/resume.pdf" download>
-            <button className="mt-6 px-8 py-3 flex items-center space-x-2 text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-all">
-              <span>View Résumé</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12l5 5L20 7"></path>
-              </svg>
-            </button>
-          </Link>
-        </motion.div>
-
-      </section>
-    
-   {/* Skills Section */}
-<section id="skills" className="w-full py-20 bg-gray-200 flex flex-col items-center">
-  <h2 className="text-4xl font-bold text-gray-900 mb-6">My Skills</h2>
-
-  {/* Programming Languages */}
-  <div className="w-3/4 mt-6">
-    <h3 className="text-2xl font-semibold text-gray-800 mb-4">Programming Languages</h3>
-    {[
-      { name: "Python", level: "90%" },
-      { name: "SQL", level: "75%" },
-      { name: "Java", level: "50%" },
-    ].map((skill) => (
-      <div key={skill.name} className="flex items-center space-x-2 mb-4">
-        <p className="text-lg font-medium text-gray-900 w-32">{skill.name}</p>
-        <div className="w-full bg-gray-300 rounded-full h-2 relative">
-          <div 
-            className="bg-blue-600 h-2 rounded-full transition-all duration-500"
-            style={{ width: skill.level }}
-          />
-          <span className="absolute right-0 text-sm font-bold text-gray-900 -top-5">
-            {skill.level}
-          </span>
         </div>
-      </div>
-    ))}
-  </div>
+      </nav>
 
-  {/* Technologies */}
-  <div className="w-3/4 mt-6">
-    <h3 className="text-2xl font-semibold text-gray-800 mb-4">Technologies</h3>
-    {[
-      { name: "Tableau", level: "80%" },
-      { name: "Power BI", level: "80%" },
-      { name: "Excel", level: "85%" },
-      { name: "Git", level: "80%" },
-    ].map((skill) => (
-      <div key={skill.name} className="flex items-center space-x-2 mb-4">
-        <p className="text-lg font-medium text-gray-900 w-32">{skill.name}</p>
-        <div className="w-full bg-gray-300 rounded-full h-2 relative">
-          <div 
-            className="bg-blue-600 h-2 rounded-full transition-all duration-500"
-            style={{ width: skill.level }}
-          />
-          <span className="absolute right-0 text-sm font-bold text-gray-900 -top-5">
-            {skill.level}
-          </span>
+      <main>
+        {/* Hero */}
+        <section className="hero">
+          <div className="container">
+            <div className="hero-content">
+              <div className="hero-text">
+                <p className="hero-greeting">Hi, I&apos;m</p>
+                <h1 className="hero-name">Moses Koroma</h1>
+                <p className="hero-tagline">
+                  I spend most of my time working with data—and the rest building things I wish existed.
+                </p>
+                <div className="hero-links">
+                  <a href="#work" className="brutal-btn primary">View Work</a>
+                  <a href="/resume.pdf" target="_blank" className="brutal-btn">Resume</a>
+                </div>
+              </div>
+              <div className="hero-visual">
+                <div className="hero-card">
+                  <p className="hero-card-title">What I Do</p>
+                  <ul className="hero-card-list">
+                    <li>Build Apps</li>
+                    <li>Analyze Data</li>
+                    <li>Design Interfaces</li>
+                    <li>Solve Problems</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Marquee */}
+        <div className="marquee">
+          <div className="marquee-content">
+            <span>Python</span>
+            <span>•</span>
+            <span>SQL</span>
+            <span>•</span>
+            <span>React</span>
+            <span>•</span>
+            <span>Next.js</span>
+            <span>•</span>
+            <span>Machine Learning</span>
+            <span>•</span>
+            <span>Data Visualization</span>
+            <span>•</span>
+                        <span>Tableau</span>
+            <span>•</span>
+            <span>Power BI</span>
+            <span>•</span>
+                        <span>Python</span>
+            <span>•</span>
+            <span>SQL</span>
+            <span>•</span>
+            <span>React</span>
+            <span>•</span>
+            <span>Next.js</span>
+            <span>•</span>
+            <span>Machine Learning</span>
+            <span>•</span>
+            <span>Data Visualization</span>
+            <span>•</span>
+                        <span>Tableau</span>
+            <span>•</span>
+            <span>Power BI</span>
+            <span>•</span>
+                      </div>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
 
-{/* Expertise Section */}
-<section id="expertise" className="w-full py-20 bg-white flex flex-col items-center">
-  <h2 className="text-4xl font-bold text-gray-900">Expertise</h2>
-  <p className="text-lg text-gray-700 mt-2">Areas of Interest</p>
+        {/* Work */}
+        <section id="work" className="section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">Selected Work</h2>
+              <div className="filter-bar">
+                {filters.map(f => (
+                  <button
+                    key={f.key}
+                    onClick={() => setFilter(f.key)}
+                    className={`filter-btn ${filter === f.key ? "active" : ""}`}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-5xl">
-    
-    {/* Expertise Items */}
-    {[
-      { title: "Data Analysis", description: "Transforming raw data into actionable insights." },
-      { title: "Machine Learning", description: "Building predictive models for smarter decision-making." },
-      { title: "Data Visualization", description: "Creating meaningful visual representations of complex data." },
-      { title: "Business Intelligence", description: "Leveraging BI tools to optimize decision-making." },
-      { title: "Database Management", description: "Designing and managing efficient database systems." },
-      { title: "Process Automation", description: "Streamlining workflows through automation techniques." }
-    ].map((expertise, index) => (
-      <motion.div 
-        key={index} 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.2 }}
-        className="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-      >
-        <h3 className="text-2xl font-semibold text-gray-900">{expertise.title}</h3>
-        <p className="text-gray-700 mt-2">{expertise.description}</p>
-      </motion.div>
-    ))}
-  </div>
-</section>
+            <div className="project-grid">
+              {filtered.map(project => (
+                project.external ? (
+                  <div
+                    key={project.slug}
+                    className="project-card"
+                    style={{ cursor: 'default' }}
+                  >
+                    <div className="project-header">
+                      <span className="project-category-tag">{project.category}</span>
+                    </div>
+                    <div className="project-info">
+                      <h3 className="project-title">{project.title}</h3>
+                      <p className="project-desc">{project.desc}</p>
+                      <div className="project-tech">
+                        {project.tech.map(t => (
+                          <span key={t} className="tech-tag">{t}</span>
+                        ))}
+                      </div>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        View on GitHub →
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    href={`/work/${project.slug}`}
+                    key={project.slug}
+                    className="project-card"
+                  >
+                    <div className="project-header">
+                      <span className="project-category-tag">{project.category}</span>
+                    </div>
+                    <div className="project-info">
+                      <h3 className="project-title">{project.title}</h3>
+                      <p className="project-desc">{project.desc}</p>
+                      <div className="project-tech">
+                        {project.tech.map(t => (
+                          <span key={t} className="tech-tag">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                )
+              ))}
+            </div>
+          </div>
+        </section>
 
-{/* Featured Projects Section */}
-<section id="projects" className="w-full py-20 bg-gray-100 flex flex-col items-center">
-  <h2 className="text-5xl font-bold text-gray-900">Projects</h2>
-  <p className="text-lg text-gray-600 mt-2">Some of my featured work. Explore more projects!</p>
+        {/* About */}
+        <section id="about" className="section">
+          <div className="container">
+            <h2 className="section-title" style={{ marginBottom: "48px" }}>About Me</h2>
+            <div className="about-grid">
+              <div className="about-text">
+                <p>
+                  I&apos;m a graduate student in Data Science and Analytics with a strong interest in how data can be used to understand and improve real-world systems. I enjoy working through messy, unstructured data, figuring out what actually matters, and turning that into something clear and actionable.
+                </p>
+                <p>
+                  I build practical solutions. Whether it&apos;s analyzing data, structuring databases, or creating systems that make information easier to work with, I focus on making things that are not only technically sound but also useful in real scenarios.
+                </p>
+                <p>
+                  Alongside that, I spend a lot of time building things on my own: apps, tools, and small systems that start as ideas and turn into something real. It&apos;s how I explore problems, test ideas, and continue learning outside of the classroom.
+                </p>
+              </div>
+              <div className="about-sidebar">
+                <div className="skill-box">
+                  <div className="skill-label">Languages & Tools</div>
+                  <div className="skill-tags">
+                    <span className="skill-tag">SQL</span>
+                    <span className="skill-tag">Python</span>
+                    <span className="skill-tag">R</span>
+                    <span className="skill-tag">JavaScript</span>
+                    <span className="skill-tag">Git/GitHub</span>
+                  </div>
+                </div>
+                <div className="skill-box">
+                  <div className="skill-label">Data & Visualization</div>
+                  <div className="skill-tags">
+                    <span className="skill-tag">Power BI</span>
+                    <span className="skill-tag">Tableau</span>
+                    <span className="skill-tag">Excel</span>
+                    <span className="skill-tag">Statistics</span>
+                    <span className="skill-tag">Data Modeling</span>
+                  </div>
+                </div>
+                <div className="skill-box">
+                  <div className="skill-label">Infrastructure</div>
+                  <div className="skill-tags">
+                    <span className="skill-tag">AWS</span>
+                    <span className="skill-tag">GCP</span>
+                    <span className="skill-tag">PostgreSQL</span>
+                    <span className="skill-tag">MySQL</span>
+                    <span className="skill-tag">SQL Server</span>
+                    <span className="skill-tag">MongoDB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-6xl">
-    {[
-      {
-        title: "IMDB Movie Analysis",
-        description: "Analyzing IMDB movies dataset to uncover trends and insights.",
-        image: "/imdb.png",
-        link: "/projects", // Links to full Projects page
-      },
-      {
-        title: "NYC Crash Analysis",
-        description: "Analyzing NYC motor vehicle collision data for patterns and safety insights.",
-        image: "/nyc-crash.png",
-        link: "/projects",
-      },
-      {
-        title: "Time Series Forecasting",
-        description: "Predicting NYC temperature trends using machine learning models.",
-        image: "/nyc-temperature.png",
-        link: "/projects",
-      },
-    ].map((project, index) => (
-      <div key={index} className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center hover:shadow-lg transition-transform transform hover:scale-105">
-        <Image src={project.image} alt={project.title} width={300} height={180} className="rounded-md"/>
-        <h3 className="text-2xl font-semibold text-gray-900 mt-4">{project.title}</h3>
-        <p className="text-gray-700 mt-2">{project.description}</p>
 
-        <Link href={project.link}>
-          <button className="mt-4 px-5 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all">
-            View Project
-          </button>
-        </Link>
-      </div>
-    ))}
-  </div>
-
-  {/* Button to View All Projects */}
-  <Link href="/projects">
-    <button className="mt-8 px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all">
-      View All Projects
-    </button>
-  </Link>
-</section>
-
-<section id="contact" className="w-full py-20 bg-gray-100 flex flex-col items-center px-6">
-  <h2 className="text-5xl font-bold text-gray-900">Get in Touch</h2>
-  <p className="text-lg text-gray-600 mt-2">Let&apos;s connect! Feel free to reach out.</p>
-
-  <form 
-    action="https://formspree.io/f/xblglvaa"
-    method="POST" 
-    className="bg-white shadow-lg p-6 rounded-lg mt-6 w-full max-w-lg"
-  >
-    <label className="block text-gray-700 text-sm font-bold mb-2">
-      Name
-      <input type="text" name="name" required className="mt-1 p-2 w-full border rounded" />
-    </label>
-
-    <label className="block text-gray-700 text-sm font-bold mb-2">
-      Email
-      <input type="email" name="email" required className="mt-1 p-2 w-full border rounded" />
-    </label>
-
-    <label className="block text-gray-700 text-sm font-bold mb-2">
-      Message
-      <textarea name="message" rows="4" required className="mt-1 p-2 w-full border rounded"></textarea>
-    </label>
-
-    <button 
-      type="submit" 
-      className="mt-4 px-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
-    >
-      Send Message
-    </button>
-  </form>
-</section>
-    </main>
+        {/* Footer */}
+        <footer className="footer">
+          <div className="container">
+            <div className="footer-content">
+              <p className="footer-text">© {new Date().getFullYear()} Moses Koroma</p>
+              <div className="footer-links">
+                <a href="https://github.com/mokeyzz1" target="_blank" rel="noopener noreferrer" className="footer-link">
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mosesbkoroma/" target="_blank" rel="noopener noreferrer" className="footer-link">
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </>
   );
 }
