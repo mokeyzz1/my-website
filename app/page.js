@@ -92,7 +92,6 @@ export default function Home() {
                 </p>
                 <div className="hero-links">
                   <a href="#work" className="brutal-btn primary">View Work</a>
-                  <a href="/resume.pdf" target="_blank" className="brutal-btn">Resume</a>
                 </div>
               </div>
               <div className="hero-visual">
