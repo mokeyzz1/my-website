@@ -27,7 +27,7 @@ export default function RideshareOpsCaseStudy() {
           <div className="container">
             <Link href="/#work" className="cs-back" style={{ color: '#f43f5e' }}>← Back to Work</Link>
             <span className="cs-tag" style={{ borderColor: '#f43f5e', color: '#f43f5e' }}>Operations Analytics</span>
-            <h1 className="cs-title">Rideshare Supply and Demand in NYC</h1>
+            <h1 className="cs-title">NYC Rideshare Operations: Analysis & Dashboard</h1>
             <p className="cs-desc">
               This project looks at how rideshare demand shifts across New York City and where supply appears to lag behind it. Using 62.4 million TLC trip records, I analyzed pickup patterns, wait times, and seasonal spikes, then built a dashboard that simulates fleet movement and flags zones where operators may be losing trips and revenue.
             </p>

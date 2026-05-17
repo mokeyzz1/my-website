@@ -29,7 +29,7 @@ export default function TrackHubCaseStudy() {
             <span className="cs-tag">Mobile App</span>
             <h1 className="cs-title">TrackHub</h1>
             <p className="cs-desc">
-              A mobile app that aggregates college track & field results from multiple sources and ranks athletes using official World Athletics scoring. Built for athletes, coaches, and fans.
+              A live mobile app for following college track & field. TrackHub brings together results, rankings, athlete profiles, and meet information in one place for athletes, coaches, and fans who actually follow the sport.
             </p>
 
             <div className="cs-meta-row">
@@ -61,19 +61,19 @@ export default function TrackHubCaseStudy() {
             <div className="cs-stats-grid">
               <div className="cs-stat">
                 <div className="cs-stat-num">2.8M+</div>
-                <div className="cs-stat-label">Results</div>
+                <div className="cs-stat-label">Results Indexed</div>
               </div>
               <div className="cs-stat">
                 <div className="cs-stat-num">123K+</div>
-                <div className="cs-stat-label">Athletes</div>
+                <div className="cs-stat-label">Athlete Profiles</div>
               </div>
               <div className="cs-stat">
                 <div className="cs-stat-num">12K+</div>
-                <div className="cs-stat-label">Meets</div>
+                <div className="cs-stat-label">Meets Tracked</div>
               </div>
               <div className="cs-stat">
-                <div className="cs-stat-num">1.8K+</div>
-                <div className="cs-stat-label">Schools</div>
+                <div className="cs-stat-num">Live</div>
+                <div className="cs-stat-label">On the App Store</div>
               </div>
             </div>
           </div>
@@ -85,15 +85,15 @@ export default function TrackHubCaseStudy() {
             <h2 className="cs-section-title">Overview</h2>
             <div className="cs-problem-solution">
               <div className="cs-block">
-                <h3>The Problem</h3>
+                <h3>Why I Built It</h3>
                 <p>
-                  College track & field data is scattered across TFRRS, USTFCCCA, Athletic.net, and MileSplit. Fans juggle multiple tabs, manually refresh pages, and piece together information. No mobile-first experience exists for the sport.
+                  College track & field data lives across TFRRS, USTFCCCA, Athletic.net, and MileSplit, but following the sport still feels fragmented. People bounce between different sites just to check results, compare athletes, or keep up with meets, and none of it feels built for mobile.
                 </p>
               </div>
               <div className="cs-block">
-                <h3>The Solution</h3>
+                <h3>What TrackHub Does</h3>
                 <p>
-                  TrackHub unifies everything into one app. Weekly leaderboards ranked by World Athletics 2025 scoring. Filter by division (D1, D2, D3, NAIA, JUCO) and gender. Athlete profiles with PRs, history, and head-to-head comparisons.
+                  TrackHub pulls that experience into one app. Users can check weekly leaderboards ranked by World Athletics scoring, follow athlete profiles over time, compare athletes head to head, and keep up with meet results without stitching the sport together themselves.
                 </p>
               </div>
             </div>

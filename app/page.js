@@ -32,9 +32,9 @@ export default function Home() {
     },
     {
       slug: "rideshare-ops-intelligence",
-      title: "NYC Rideshare Operations Intelligence",
+      title: "NYC Rideshare Operations: Analysis & Dashboard",
       category: "data",
-      desc: "A live dashboard for NYC rideshare fleet operations, built on 62.4 million TLC trip records. Surfaces supply-demand gaps across 39 zones and recommends where to move drivers to cut wait times.",
+      desc: "An analysis of 62.4 million NYC trip records asking a simple question: where is rideshare supply lagging demand? The clearest signal showed up in residential Brooklyn, not Manhattan, and a live dashboard makes the pattern operational.",
       tech: ["Python", "SQL", "DuckDB", "Dash"],
       link: "https://github.com/mokeyzz1/rideshare-ops-intelligence",
     },
