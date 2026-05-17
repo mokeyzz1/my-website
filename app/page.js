@@ -23,6 +23,22 @@ export default function Home() {
       link: "https://apps.apple.com/us/app/trackhub-collegiate-t-f/id6758220972",
     },
     {
+      slug: "saas-ab-test-onboarding",
+      title: "B2B SaaS Onboarding Experiment",
+      category: "data",
+      desc: "A project management company tested a guided onboarding checklist across 2,000 new accounts. Overall activation improved, but the deeper story was in the segments: smaller teams benefited while enterprise-oriented accounts did not.",
+      tech: ["Python", "pandas", "SciPy", "statsmodels", "SQLite"],
+      link: "https://github.com/mokeyzz1/saas-ab-test-onboarding",
+    },
+    {
+      slug: "rideshare-ops-intelligence",
+      title: "NYC Rideshare Operations Intelligence",
+      category: "data",
+      desc: "A live dashboard for NYC rideshare fleet operations, built on 62.4 million TLC trip records. Surfaces supply-demand gaps across 39 zones and recommends where to move drivers to cut wait times.",
+      tech: ["Python", "SQL", "DuckDB", "Dash"],
+      link: "https://github.com/mokeyzz1/rideshare-ops-intelligence",
+    },
+    {
       slug: "drug-reviews",
       title: "Drug Reviews NLP",
       category: "data",
