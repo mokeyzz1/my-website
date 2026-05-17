@@ -25,8 +25,8 @@ export default function RideshareOpsCaseStudy() {
         {/* Hero - Dark */}
         <section className="cs-hero">
           <div className="container">
-            <Link href="/#work" className="cs-back" style={{ color: '#f43f5e' }}>← Back to Work</Link>
-            <span className="cs-tag" style={{ borderColor: '#f43f5e', color: '#f43f5e' }}>Operations Analytics</span>
+            <Link href="/#work" className="cs-back" style={{ color: '#ed7a32' }}>← Back to Work</Link>
+            <span className="cs-tag" style={{ borderColor: '#ed7a32', color: '#ed7a32' }}>Operations Analytics</span>
             <h1 className="cs-title">NYC Rideshare Operations: Analysis & Dashboard</h1>
             <p className="cs-desc">
               This project looks at how rideshare demand shifts across New York City and where supply appears to lag behind it. Using 62.4 million TLC trip records, I analyzed pickup patterns, wait times, and seasonal spikes, then built a dashboard that simulates fleet movement and flags zones where operators may be losing trips and revenue.
@@ -48,13 +48,13 @@ export default function RideshareOpsCaseStudy() {
               <div className="cs-meta-item">
                 <span className="cs-meta-label">Code</span>
                 <span className="cs-meta-value">
-                  <a href="https://github.com/mokeyzz1/rideshare-ops-intelligence" target="_blank" rel="noopener noreferrer" style={{ color: '#f43f5e' }}>GitHub ↗</a>
+                  <a href="https://github.com/mokeyzz1/rideshare-ops-intelligence" target="_blank" rel="noopener noreferrer" style={{ color: '#ed7a32' }}>GitHub ↗</a>
                 </span>
               </div>
               <div className="cs-meta-item">
                 <span className="cs-meta-label">Demo</span>
                 <span className="cs-meta-value">
-                  <a href="https://rideshare-ops-intelligence.onrender.com" target="_blank" rel="noopener noreferrer" style={{ color: '#f43f5e' }}>Live Dashboard ↗</a>
+                  <a href="https://rideshare-ops-intelligence.onrender.com" target="_blank" rel="noopener noreferrer" style={{ color: '#ed7a32' }}>Live Dashboard ↗</a>
                 </span>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function RideshareOpsCaseStudy() {
         </section>
 
         {/* Stats Banner - Rose */}
-        <section className="cs-stats-banner" style={{ background: '#f43f5e' }}>
+        <section className="cs-stats-banner" style={{ background: '#ed7a32' }}>
           <div className="container">
             <div className="cs-stats-grid">
               <div className="cs-stat">
@@ -88,7 +88,7 @@ export default function RideshareOpsCaseStudy() {
         {/* Problem & Approach */}
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#f43f5e' }}>Overview</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>Overview</h2>
             <div className="cs-problem-solution">
               <div className="cs-block">
                 <h3>The Problem</h3>
@@ -109,21 +109,21 @@ export default function RideshareOpsCaseStudy() {
         {/* Key Findings */}
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#f43f5e' }}>Key Findings</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>Key Findings</h2>
             <div className="cs-features">
-              <div className="cs-feature" style={{ '--hover-color': '#f43f5e' }}>
+              <div className="cs-feature" style={{ '--hover-color': '#ed7a32' }}>
                 <h3>Brooklyn showed the clearest signs of undersupply</h3>
                 <p>Brooklyn accounts for 27% of pickups but the median wait is 3.4 minutes versus 3.0 in Manhattan. Crown Heights North, East New York, Bushwick South, and Bedford show up as undersupplied across every cut of the data.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': '#f43f5e' }}>
+              <div className="cs-feature" style={{ '--hover-color': '#ed7a32' }}>
                 <h3>New Year&apos;s Eve demand was concentrated in residential Brooklyn</h3>
                 <p>Citywide demand at 9 PM on New Year&apos;s Eve was 75% above a typical December 9 PM, and almost all of that surge came from residential Brooklyn: Stuyvesant Heights +209%, Bushwick South +183%, Bedford +150%, Crown Heights North +141%. Manhattan event destinations were not the story.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': '#f43f5e' }}>
+              <div className="cs-feature" style={{ '--hover-color': '#ed7a32' }}>
                 <h3>Airports need to be treated differently</h3>
                 <p>JFK and LaGuardia together pulled more than 2 million trips with a 5.8 minute average wait, the longest in the system. They need their own operational playbook, not the same logic used for neighborhood demand.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': '#f43f5e' }}>
+              <div className="cs-feature" style={{ '--hover-color': '#ed7a32' }}>
                 <h3>The highest wait times happened overnight</h3>
                 <p>Citywide median wait peaks at 4.37 minutes around 4 AM, when demand is at its lowest. Wait time is only a proxy for supply, but the timing points to fewer drivers on shift rather than volume pressure, exactly the kind of pattern an ops team would want to monitor.</p>
               </div>
@@ -134,7 +134,7 @@ export default function RideshareOpsCaseStudy() {
         {/* Methodology - Horizontal Flow */}
         <section className="cs-section cs-section-dark">
           <div className="container">
-            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': '#f43f5e' }}>How I Worked Through It</h2>
+            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': '#ed7a32' }}>How I Worked Through It</h2>
 
             <div className="cs-flow">
               <div className="cs-flow-group">
@@ -145,7 +145,7 @@ export default function RideshareOpsCaseStudy() {
                 </div>
               </div>
 
-              <span className="cs-flow-arrow" style={{ color: '#f43f5e' }}>→</span>
+              <span className="cs-flow-arrow" style={{ color: '#ed7a32' }}>→</span>
 
               <div className="cs-flow-group">
                 <div className="cs-flow-label">Process</div>
@@ -155,17 +155,17 @@ export default function RideshareOpsCaseStudy() {
                 </div>
               </div>
 
-              <span className="cs-flow-arrow" style={{ color: '#f43f5e' }}>→</span>
+              <span className="cs-flow-arrow" style={{ color: '#ed7a32' }}>→</span>
 
               <div className="cs-flow-group">
                 <div className="cs-flow-label">Simulate</div>
-                <div className="cs-flow-box" style={{ background: '#f43f5e', borderColor: '#f43f5e', color: '#000' }}>
+                <div className="cs-flow-box" style={{ background: '#ed7a32', borderColor: '#ed7a32', color: '#000' }}>
                   <div className="cs-flow-title">1,500 drivers</div>
                   <div className="cs-flow-detail" style={{ color: '#000', opacity: 0.7 }}>Modeled fleet behavior</div>
                 </div>
               </div>
 
-              <span className="cs-flow-arrow" style={{ color: '#f43f5e' }}>→</span>
+              <span className="cs-flow-arrow" style={{ color: '#ed7a32' }}>→</span>
 
               <div className="cs-flow-group">
                 <div className="cs-flow-label">Detect</div>
@@ -175,7 +175,7 @@ export default function RideshareOpsCaseStudy() {
                 </div>
               </div>
 
-              <span className="cs-flow-arrow" style={{ color: '#f43f5e' }}>→</span>
+              <span className="cs-flow-arrow" style={{ color: '#ed7a32' }}>→</span>
 
               <div className="cs-flow-group">
                 <div className="cs-flow-label">Act</div>
@@ -191,11 +191,11 @@ export default function RideshareOpsCaseStudy() {
         {/* Analysis Focus */}
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#f43f5e' }}>What I Focused On</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>What I Focused On</h2>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
-                <span className="cs-challenge-num" style={{ background: '#f43f5e' }}>1</span>
+                <span className="cs-challenge-num" style={{ background: '#ed7a32' }}>1</span>
                 Finding the strongest demand patterns
               </div>
               <div className="cs-challenge-row">
@@ -204,13 +204,13 @@ export default function RideshareOpsCaseStudy() {
               </div>
               <div className="cs-challenge-row">
                 <span className="cs-challenge-label">Why it mattered</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#f43f5e' }}>It kept the dashboard grounded in observed behavior instead of a generic demand curve.</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#ed7a32' }}>It kept the dashboard grounded in observed behavior instead of a generic demand curve.</span>
               </div>
             </div>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
-                <span className="cs-challenge-num" style={{ background: '#f43f5e' }}>2</span>
+                <span className="cs-challenge-num" style={{ background: '#ed7a32' }}>2</span>
                 Filling in the part the trip data couldn&apos;t show
               </div>
               <div className="cs-challenge-row">
@@ -219,13 +219,13 @@ export default function RideshareOpsCaseStudy() {
               </div>
               <div className="cs-challenge-row">
                 <span className="cs-challenge-label">Why it mattered</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#f43f5e' }}>That made it possible to move from describing demand to estimating where supply might actually fall short.</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#ed7a32' }}>That made it possible to move from describing demand to estimating where supply might actually fall short.</span>
               </div>
             </div>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
-                <span className="cs-challenge-num" style={{ background: '#f43f5e' }}>3</span>
+                <span className="cs-challenge-num" style={{ background: '#ed7a32' }}>3</span>
                 Turning patterns into something operational
               </div>
               <div className="cs-challenge-row">
@@ -234,7 +234,7 @@ export default function RideshareOpsCaseStudy() {
               </div>
               <div className="cs-challenge-row">
                 <span className="cs-challenge-label">Why it mattered</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#f43f5e' }}>It turned the project into something more useful than a static analysis by pointing toward where action might matter most.</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#ed7a32' }}>It turned the project into something more useful than a static analysis by pointing toward where action might matter most.</span>
               </div>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function RideshareOpsCaseStudy() {
         {/* Dashboard */}
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#f43f5e' }}>The Dashboard</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>The Dashboard</h2>
             <p style={{ fontSize: '17px', lineHeight: 1.7, maxWidth: '700px', marginBottom: '32px' }}>
               The analysis ends in a live dashboard. It shows a citywide map of all 39 zones, highlights where supply appears tight, and surfaces repositioning suggestions based on the simulation. There&apos;s also a playback mode that lets you step through a full day and watch how those patterns change hour by hour.
             </p>

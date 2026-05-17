@@ -46,9 +46,9 @@ export default function TrackHubCaseStudy() {
                 <span className="cs-meta-value">2025–2026</span>
               </div>
               <div className="cs-meta-item">
-                <span className="cs-meta-label">Platform</span>
+                <span className="cs-meta-label">Live</span>
                 <span className="cs-meta-value">
-                  <a href="https://apps.apple.com/us/app/trackhub-collegiate-t-f/id6758220972" target="_blank" rel="noopener noreferrer" style={{ color: '#06b6d4' }}>iOS App Store ↗</a>
+                  <a href="https://apps.apple.com/us/app/trackhub-collegiate-t-f/id6758220972" target="_blank" rel="noopener noreferrer" style={{ color: '#06b6d4' }}>On the App Store ↗</a>
                 </span>
               </div>
             </div>
@@ -72,8 +72,8 @@ export default function TrackHubCaseStudy() {
                 <div className="cs-stat-label">Meets Tracked</div>
               </div>
               <div className="cs-stat">
-                <div className="cs-stat-num">Live</div>
-                <div className="cs-stat-label">On the App Store</div>
+                <div className="cs-stat-num">300+</div>
+                <div className="cs-stat-label">Active Users</div>
               </div>
             </div>
           </div>
