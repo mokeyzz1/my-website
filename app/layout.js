@@ -1,22 +1,46 @@
 import "./globals.css";
+import { siteConfig } from "./site-metadata";
 
 export const metadata = {
-  title: "Moses Koroma - Portfolio",
-  description: "A personal portfolio showcasing my projects and skills.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Moses Koroma",
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: "Moses Koroma Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Moses Koroma - Data analyst and product builder",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ["/twitter-image"],
+  },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-new.ico",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon-new.ico" sizes="any" />
-      </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
