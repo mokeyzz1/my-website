@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const socialImageAlt =
-  "Moses Koroma - Data analyst and product builder";
+export const socialImageAlt = "Moses Koroma portfolio";
 export const socialImageSize = {
   width: 1200,
   height: 630,
@@ -85,7 +84,7 @@ export function createSocialImage() {
                   fontWeight: 700,
                 }}
               >
-                Data Analyst & Product Builder
+                Selected Product, Data & Software Work
               </div>
             </div>
 

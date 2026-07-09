@@ -1,8 +1,8 @@
 export const siteConfig = {
   url: "https://www.mkoroma.com",
-  title: "Moses Koroma | Data Analyst & Product Builder",
+  title: "Moses Koroma | Portfolio",
   description:
-    "Portfolio of Moses Koroma, a data analyst and product builder creating useful software, analytical tools, and data-driven products.",
+    "Portfolio of Moses Koroma featuring product, data, and software projects.",
 };
 
 export function createPageMetadata({ title, description, path }) {
@@ -25,7 +25,7 @@ export function createPageMetadata({ title, description, path }) {
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: "Moses Koroma - Data analyst and product builder",
+          alt: "Moses Koroma portfolio",
         },
       ],
     },

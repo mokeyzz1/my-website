@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "./site-metadata";
 
 export const metadata = {
@@ -22,7 +23,7 @@ export const metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Moses Koroma - Data analyst and product builder",
+        alt: "Moses Koroma portfolio",
       },
     ],
   },
@@ -32,15 +33,15 @@ export const metadata = {
     description: siteConfig.description,
     images: ["/twitter-image"],
   },
-  icons: {
-    icon: "/favicon-new.ico",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
