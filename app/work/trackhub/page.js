@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import ProjectNavigation from "../ProjectNavigation";
 
 export default function TrackHubCaseStudy() {
   return (
@@ -301,6 +302,8 @@ export default function TrackHubCaseStudy() {
             </div>
           </div>
         </section>
+
+        <ProjectNavigation current="trackhub" />
 
         {/* Footer */}
         <footer className="footer">

@@ -1,7 +1,27 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
+import ProjectNavigation from "../ProjectNavigation";
 
 export default function AthleteDeskCaseStudy() {
+  const productViews = [
+    {
+      src: "/images/athletedesk/recruiting.png",
+      title: "Recruiting Database",
+      description: "Regional progress and 542 prospects in one operational view.",
+    },
+    {
+      src: "/images/athletedesk/brand-outreach.png",
+      title: "Brand Outreach",
+      description: "Partnership status, athlete ownership, and deal value tracked together.",
+    },
+    {
+      src: "/images/athletedesk/analytics.png",
+      title: "Agency Analytics",
+      description: "Recruiting performance, conversion, and class-year trends at a glance.",
+    },
+  ];
+
   return (
     <>
       {/* Navigation */}
@@ -51,6 +71,58 @@ export default function AthleteDeskCaseStudy() {
                   <a href="https://athletedesk.io" target="_blank" rel="noopener noreferrer" style={{ color: '#f59e0b' }}>athletedesk.io ↗</a>
                 </span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Product Views */}
+        <section className="cs-section cs-product-showcase">
+          <div className="container">
+            <div className="cs-showcase-heading">
+              <h2 className="cs-section-title" style={{ '--title-color': '#f59e0b' }}>Inside AthleteDesk</h2>
+              <p>A working agency workspace built around the full athlete lifecycle, from first outreach to signed deals and revenue.</p>
+            </div>
+
+            <figure className="cs-screen cs-screen-featured">
+              <div className="cs-screen-bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>athletedesk.io / dashboard</strong>
+              </div>
+              <Image
+                src="/images/athletedesk/dashboard.png"
+                alt="AthleteDesk dashboard with recruiting progress, revenue, tasks, and active brand discussions"
+                width={1280}
+                height={720}
+                priority
+              />
+              <figcaption>
+                <strong>Operations Dashboard</strong>
+                <span>Recruiting, revenue, follow-ups, tasks, and brand activity in one view.</span>
+              </figcaption>
+            </figure>
+
+            <div className="cs-screen-grid">
+              {productViews.map((view) => (
+                <figure className="cs-screen" key={view.title}>
+                  <div className="cs-screen-bar" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <Image
+                    src={view.src}
+                    alt={`AthleteDesk ${view.title.toLowerCase()} screen`}
+                    width={1280}
+                    height={720}
+                  />
+                  <figcaption>
+                    <strong>{view.title}</strong>
+                    <span>{view.description}</span>
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
@@ -227,6 +299,8 @@ export default function AthleteDeskCaseStudy() {
             </div>
           </div>
         </section>
+
+        <ProjectNavigation current="athletedesk" />
 
         {/* Footer */}
         <footer className="footer">

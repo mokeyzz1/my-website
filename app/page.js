@@ -10,7 +10,7 @@ export default function Home() {
       slug: "athletedesk",
       title: "AthleteDesk",
       category: "product",
-      desc: "A purpose-built CRM for sports agencies — replacing disconnected spreadsheets with a unified platform for recruiting, roster management, brand deals, and team coordination.",
+      desc: "A working CRM that helps sports agencies manage recruiting, athletes, brand deals, and team follow-ups without relying on disconnected spreadsheets.",
       tech: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
       link: "https://athletedesk.io",
     },
@@ -18,7 +18,7 @@ export default function Home() {
       slug: "trackhub",
       title: "TrackHub",
       category: "product",
-      desc: "Mobile app for tracking college track & field athletes, meets, and performances. Features leaderboards, athlete profiles, head-to-head comparisons, and meet results.",
+      desc: "A live mobile app that makes it easier to follow college track and field through athlete profiles, rankings, head-to-head comparisons, and meet results.",
       tech: ["React Native", "Expo", "Supabase", "PostgreSQL"],
       link: "https://apps.apple.com/us/app/trackhub-collegiate-t-f/id6758220972",
     },
@@ -26,7 +26,7 @@ export default function Home() {
       slug: "saas-ab-test-onboarding",
       title: "B2B SaaS Onboarding Experiment",
       category: "data",
-      desc: "A project management company tested a guided onboarding checklist across 2,000 new accounts. Overall activation improved, but the deeper story was in the segments: smaller teams benefited while enterprise-oriented accounts did not.",
+      desc: "A guided setup checklist helped smaller teams get started, but made onboarding harder for larger companies. The better decision was to use it only where it worked.",
       tech: ["Python", "pandas", "SciPy", "statsmodels", "SQLite"],
       link: "https://github.com/mokeyzz1/saas-ab-test-onboarding",
     },
@@ -34,7 +34,7 @@ export default function Home() {
       slug: "rideshare-ops-intelligence",
       title: "NYC Rideshare Operations: Analysis & Dashboard",
       category: "data",
-      desc: "An analysis of 62.4 million NYC trip records asking a simple question: where is rideshare supply lagging demand? The clearest signal showed up in residential Brooklyn, not Manhattan, and a live dashboard makes the pattern operational.",
+      desc: "Analyzed 62.4 million NYC trips to find where riders were waiting longer for drivers. Residential Brooklyn showed the clearest gaps, and the dashboard turns them into actions.",
       tech: ["Python", "SQL", "DuckDB", "Dash"],
       link: "https://github.com/mokeyzz1/rideshare-ops-intelligence",
     },
@@ -42,7 +42,7 @@ export default function Home() {
       slug: "drug-reviews",
       title: "Drug Reviews NLP",
       category: "data",
-      desc: "Analyzed 215K patient reviews to identify underperforming medications and quantify $27M+ in revenue risk from drug non-adherence. Built an interactive Streamlit dashboard.",
+      desc: "Compared 215,000 historical patient reviews to reveal large rating differences between medications used for the same condition and built a tool for exploring them.",
       tech: ["Python", "SQL", "NLTK", "Streamlit"],
       link: "https://mokeyzz1-drug-reviews-nlp-app-d9dls4.streamlit.app",
     },
@@ -50,19 +50,17 @@ export default function Home() {
       slug: "olist-analysis",
       title: "Olist Multi-Seller Analysis",
       category: "data",
-      desc: "Discovered that multi-seller orders drop customer satisfaction by 32% (4.18 → 2.86). Statistical analysis of 99K orders with ROI-backed recommendations.",
+      desc: "Found that orders split across several sellers received much lower customer ratings, even when they arrived on time, pointing to a communication problem the marketplace could fix.",
       tech: ["Python", "pandas", "scipy", "matplotlib"],
       link: "https://github.com/mokeyzz1/olist-multiseller-analysis",
-      external: true,
     },
     {
       slug: "ecommerce-funnel",
       title: "E-Commerce Funnel Analysis",
       category: "data",
-      desc: "Analyzed 109.9M events from 5.3M users to identify conversion bottlenecks. Found 46.3% cart abandonment and weekend outperformance patterns.",
+      desc: "Followed 5.3 million shoppers to find where they left before purchasing, uncovering opportunities on product pages, abandoned carts, and a separate direct-buy path.",
       tech: ["Python", "DuckDB", "pandas", "statsmodels"],
       link: "https://github.com/mokeyzz1/ecommerce-funnel-analysis",
-      external: true,
     },
   ];
 
@@ -242,13 +240,13 @@ export default function Home() {
             <div className="about-grid">
               <div className="about-text">
                 <p>
-                  I&apos;m a graduate student in Data Science and Analytics with a strong interest in how data can be used to understand and improve real-world systems. I enjoy working through messy, unstructured data, figuring out what actually matters, and turning that into something clear and actionable.
+                  I&apos;m curious by default. I like figuring out how things work, why they break, and what would make them better.
                 </p>
                 <p>
-                  I build practical solutions. Whether it&apos;s analyzing data, structuring databases, or creating systems that make information easier to work with, I focus on making things that are not only technically sound but also useful in real scenarios.
+                  Most of what I build starts with noticing something that feels slower, messier, or harder than it should be. Sometimes the answer is a dashboard. Sometimes it&apos;s an app. Sometimes it&apos;s a better way to organize information so people can actually use it.
                 </p>
                 <p>
-                  Alongside that, I spend a lot of time building things on my own: apps, tools, and small systems that start as ideas and turn into something real. It&apos;s how I explore problems, test ideas, and continue learning outside of the classroom.
+                  I care about making things practical, clear, and useful. The work I enjoy most sits between data, software, product thinking, and real-world problem solving.
                 </p>
               </div>
               <div className="about-sidebar">

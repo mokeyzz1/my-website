@@ -1,5 +1,7 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
+import ProjectNavigation from "../ProjectNavigation";
 
 export default function RideshareOpsCaseStudy() {
   return (
@@ -103,6 +105,50 @@ export default function RideshareOpsCaseStudy() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Dashboard Preview */}
+        <section className="cs-section cs-product-showcase rideshare-showcase">
+          <div className="container">
+            <div className="cs-showcase-heading">
+              <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>
+                From Citywide Data to a Clear Next Move
+              </h2>
+              <p>
+                The dashboard shows an operations team where riders may be waiting too long, which areas need more drivers, and where nearby drivers could be moved to help.
+              </p>
+            </div>
+
+            <figure className="cs-screen rideshare-dashboard-screen">
+              <div className="cs-screen-bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>RideFlow Ops / live operations dashboard</strong>
+              </div>
+              <div className="rideshare-dashboard-crop">
+                <Image
+                  src="/images/rideshare/dashboard.png"
+                  alt="RideFlow Ops dashboard showing active drivers, undersupplied zones, a New York City map, and prioritized driver-movement recommendations"
+                  width={1400}
+                  height={900}
+                />
+              </div>
+              <figcaption>
+                <strong>See the problem, then act on it</strong>
+                <span>The map shows where driver coverage is tight, while the action queue turns that signal into a prioritized list for the operations team.</span>
+              </figcaption>
+            </figure>
+
+            <a
+              href="https://rideshare-ops-intelligence.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="brutal-btn rideshare-dashboard-link"
+            >
+              Explore the Live Dashboard ↗
+            </a>
           </div>
         </section>
 
@@ -240,24 +286,7 @@ export default function RideshareOpsCaseStudy() {
           </div>
         </section>
 
-        {/* Dashboard */}
-        <section className="cs-section" style={{ background: '#f5f5f5' }}>
-          <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#ed7a32' }}>The Dashboard</h2>
-            <p style={{ fontSize: '17px', lineHeight: 1.7, maxWidth: '700px', marginBottom: '32px' }}>
-              The analysis ends in a live dashboard. It shows a citywide map of all 39 zones, highlights where supply appears tight, and surfaces repositioning suggestions based on the simulation. There&apos;s also a playback mode that lets you step through a full day and watch how those patterns change hour by hour.
-            </p>
-            <a
-              href="https://rideshare-ops-intelligence.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="brutal-btn"
-              style={{ display: 'inline-block' }}
-            >
-              Open the Live Dashboard ↗
-            </a>
-          </div>
-        </section>
+        <ProjectNavigation current="rideshare-ops-intelligence" />
 
         {/* Footer */}
         <footer className="footer">

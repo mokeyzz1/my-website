@@ -418,6 +418,21 @@ body {
   box-shadow: 8px 8px 0 var(--black);
 }
 
+.cs-screen-bar > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.cs-screen-bar > span:nth-child(2) {
+  opacity: 0.65;
+}
+
+.cs-screen-bar > span:nth-child(3) {
+  opacity: 0.35;
+}
+
 .project-header {
   padding: 16px 24px;
   border-bottom: 2px solid var(--black);
@@ -878,6 +893,916 @@ input::placeholder, textarea::placeholder {
   content: '//';
   color: var(--title-color, var(--cyan));
   margin-right: 12px;
+}
+
+/* Product screenshots */
+.cs-product-showcase {
+  background:
+    linear-gradient(135deg, rgba(245, 158, 11, 0.13), transparent 42%),
+    #f2f3f5;
+}
+
+.cs-showcase-heading {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 520px);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.cs-showcase-heading .cs-section-title {
+  margin-bottom: 0;
+}
+
+.cs-showcase-heading p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.cs-screen {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 3px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.cs-screen-featured {
+  margin-bottom: 36px;
+}
+
+.cs-screen-bar {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  background: var(--black);
+  color: #aaa;
+}
+
+.cs-screen-bar strong {
+  margin-left: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.cs-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cs-screen figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 20px;
+  border-top: 2px solid var(--black);
+}
+
+.cs-screen figcaption strong {
+  font-size: 15px;
+}
+
+.cs-screen figcaption span {
+  max-width: 560px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  text-align: right;
+}
+
+.cs-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cs-screen-grid .cs-screen {
+  box-shadow: 5px 5px 0 var(--black);
+}
+
+.cs-screen-grid .cs-screen figcaption {
+  display: block;
+}
+
+.cs-screen-grid .cs-screen figcaption strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cs-screen-grid .cs-screen figcaption span {
+  display: block;
+  text-align: left;
+}
+
+/* Rideshare dashboard */
+.rideshare-showcase {
+  background:
+    linear-gradient(135deg, rgba(237, 122, 50, 0.16), transparent 44%),
+    #f3f1ee;
+}
+
+.rideshare-dashboard-screen {
+  box-shadow: 8px 8px 0 #ed7a32;
+}
+
+.rideshare-dashboard-crop {
+  aspect-ratio: 1.9 / 1;
+  overflow: hidden;
+  background: #0b1118;
+}
+
+.rideshare-dashboard-crop img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rideshare-dashboard-link {
+  display: inline-block;
+  margin-top: 34px;
+}
+
+/* Drug review comparison */
+.drug-finder-showcase {
+  background:
+    linear-gradient(135deg, rgba(139, 92, 246, 0.14), transparent 44%),
+    #f2f0f6;
+}
+
+.drug-finder-preview {
+  padding: 32px;
+  background: #17191f;
+  color: #fff;
+  border: 3px solid var(--black);
+  box-shadow: 8px 8px 0 #8b5cf6;
+}
+
+.drug-finder-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #3c3f49;
+}
+
+.drug-finder-kicker {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #aaa6b7;
+}
+
+.drug-finder-topbar h3 {
+  font-size: 24px;
+}
+
+.drug-finder-condition {
+  padding: 11px 14px;
+  background: #272a33;
+  border: 1px solid #4b4e59;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+}
+
+.drug-finder-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.drug-finder-metrics > div {
+  min-height: 116px;
+  padding: 20px;
+  background: #22252d;
+  border: 1px solid #3c3f49;
+}
+
+.drug-finder-metrics strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 27px;
+  color: #b69af7;
+}
+
+.drug-finder-metrics span {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #b9bbc4;
+}
+
+.drug-finder-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.drug-rating-card {
+  padding: 22px;
+  background: #22252d;
+  border: 1px solid #3c3f49;
+}
+
+.drug-rating-card.higher {
+  border-left: 5px solid #43c58a;
+}
+
+.drug-rating-card.lower {
+  border-left: 5px solid #ef5c7a;
+}
+
+.drug-rating-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.drug-rating-copy > span {
+  max-width: 190px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #b9bbc4;
+}
+
+.drug-rating-copy strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+.drug-rating-copy small {
+  font-size: 12px;
+  color: #8d909a;
+}
+
+.drug-rating-track {
+  height: 8px;
+  overflow: hidden;
+  background: #3c3f49;
+}
+
+.drug-rating-track span {
+  display: block;
+  height: 100%;
+}
+
+.drug-rating-card.higher .drug-rating-track span {
+  background: #43c58a;
+}
+
+.drug-rating-card.lower .drug-rating-track span {
+  background: #ef5c7a;
+}
+
+.drug-finder-takeaway {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  margin-top: 22px;
+  padding: 20px 22px;
+  background: #8b5cf6;
+  color: #0a0a0a;
+}
+
+.drug-finder-takeaway strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.drug-finder-takeaway p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.drug-finder-disclaimer {
+  margin-top: 24px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #5f5969;
+}
+
+/* Olist order comparison */
+.olist-comparison-section {
+  background:
+    linear-gradient(135deg, rgba(14, 165, 233, 0.14), transparent 44%),
+    #eef7fa;
+}
+
+.olist-order-comparison {
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.olist-order-card {
+  padding: 28px;
+  background: #fff;
+  border: 3px solid var(--black);
+}
+
+.olist-order-card.single {
+  box-shadow: 7px 7px 0 #0ea5e9;
+}
+
+.olist-order-card.multiple {
+  box-shadow: 7px 7px 0 #ff735c;
+}
+
+.olist-package-row {
+  display: flex;
+  gap: 8px;
+  min-height: 52px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.olist-package {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 40px;
+  background: #d7eaf2;
+  border: 2px solid var(--black);
+}
+
+.olist-package::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  width: 31px;
+  height: 14px;
+  background: inherit;
+  border: 2px solid var(--black);
+  transform: skewX(-28deg);
+}
+
+.olist-order-card.multiple .olist-package {
+  width: 42px;
+  background: #ffd8d1;
+}
+
+.olist-order-label {
+  display: block;
+  margin-bottom: 7px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.olist-order-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.olist-order-card > p {
+  min-height: 50px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.olist-rating {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 2px solid var(--black);
+}
+
+.olist-rating strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.olist-rating span {
+  max-width: 105px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #666;
+}
+
+.olist-one-star {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 13px 14px;
+  background: #f3f3f3;
+  font-size: 12px;
+}
+
+.olist-one-star strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+}
+
+.olist-comparison-callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 16px;
+  background: var(--black);
+  color: #fff;
+  text-align: center;
+}
+
+.olist-comparison-callout span,
+.olist-comparison-callout small {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #aaa;
+}
+
+.olist-comparison-callout strong {
+  margin: 12px 0;
+  font-size: 34px;
+  line-height: 1;
+  color: #0ea5e9;
+}
+
+.olist-comparison-note {
+  max-width: 860px;
+  margin-top: 34px;
+  padding-left: 18px;
+  border-left: 4px solid #0ea5e9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.olist-recommendation-section {
+  background: #eef7fa;
+}
+
+.olist-recommendation-intro {
+  max-width: 700px;
+  margin: -18px 0 34px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.olist-recommendation-section .cs-achievement-value {
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+/* E-commerce funnel */
+.funnel-journey-section {
+  background:
+    linear-gradient(135deg, rgba(250, 204, 21, 0.2), transparent 46%),
+    #f8f5e9;
+}
+
+.funnel-journey {
+  display: grid;
+  grid-template-columns: 1.45fr 0.55fr;
+  background: #fff;
+  border: 3px solid var(--black);
+  box-shadow: 8px 8px 0 #facc15;
+}
+
+.funnel-path {
+  padding: 34px;
+}
+
+.funnel-stage + .funnel-stage {
+  margin-top: 26px;
+}
+
+.funnel-cart-outcomes {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.funnel-cart-outcomes > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 2px solid var(--black);
+}
+
+.funnel-cart-outcomes .purchased {
+  background: #fff4bd;
+}
+
+.funnel-cart-outcomes .left {
+  background: #f1f1f1;
+}
+
+.funnel-cart-outcomes span {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.funnel-cart-outcomes strong {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+}
+
+.funnel-cart-outcomes small {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: #666;
+}
+
+.funnel-cart-outcomes + .funnel-stage {
+  margin-top: 26px;
+}
+
+.funnel-stage-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.funnel-stage-copy span {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.funnel-stage-copy strong {
+  font-size: 17px;
+}
+
+.funnel-stage-bar {
+  height: 26px;
+  background: #ececec;
+  border: 2px solid var(--black);
+}
+
+.funnel-stage-bar span {
+  display: block;
+  height: 100%;
+  min-width: 8px;
+  background: #facc15;
+}
+
+.funnel-stage.view .funnel-stage-bar span {
+  width: 100%;
+}
+
+.funnel-stage.cart .funnel-stage-bar span {
+  width: 19.8%;
+}
+
+.funnel-stage.purchase .funnel-stage-bar span {
+  width: 13.1%;
+  background: #141414;
+}
+
+.funnel-stage small {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.funnel-drop {
+  margin: 20px 0 24px;
+  padding: 14px 16px;
+  background: #fff4bd;
+  border-left: 4px solid var(--black);
+}
+
+.funnel-drop strong,
+.funnel-drop span {
+  display: block;
+}
+
+.funnel-drop strong {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.funnel-drop span {
+  font-size: 12px;
+  color: #555;
+}
+
+.funnel-opportunity-panel {
+  padding: 32px 26px;
+  background: var(--black);
+  color: #fff;
+}
+
+.funnel-panel-kicker {
+  display: block;
+  margin-bottom: 25px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #facc15;
+}
+
+.funnel-opportunity {
+  padding: 22px 0;
+  border-top: 1px solid #444;
+}
+
+.funnel-opportunity strong {
+  display: block;
+  margin-bottom: 9px;
+  font-family: 'Space Mono', monospace;
+  font-size: 30px;
+  color: #facc15;
+}
+
+.funnel-opportunity p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.funnel-journey-note {
+  max-width: 880px;
+  margin-top: 32px;
+  padding-left: 18px;
+  border-left: 4px solid #d4a900;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.funnel-recommendation-section {
+  background: #f8f5e9;
+}
+
+.funnel-recommendation-intro {
+  max-width: 760px;
+  margin: -18px 0 34px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.funnel-recommendation-section .cs-achievement-value {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* Project navigation */
+.project-navigation {
+  padding: 64px 0;
+  background: #f3f3f3;
+  border-top: 3px solid var(--black);
+}
+
+.project-navigation-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.project-navigation-heading > span {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.project-navigation-heading > a {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--black);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-navigation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project-navigation-card {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  background: var(--black);
+  color: #fff;
+  border: 3px solid var(--black);
+  box-shadow: 7px 7px 0 var(--project-accent);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-navigation-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--project-accent);
+}
+
+.project-navigation-card > span {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--project-accent);
+}
+
+.project-navigation-card > strong {
+  max-width: 440px;
+  font-size: 25px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.project-navigation-card.next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* SaaS experiment chart */
+.experiment-visual-section {
+  background: #f1f4f2;
+}
+
+.experiment-visual-heading {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 480px);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.experiment-visual-heading .cs-section-title {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+.experiment-visual-heading > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.experiment-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #367a61;
+}
+
+.experiment-chart {
+  padding: 32px;
+  background: #fff;
+  border: 3px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.experiment-chart-scale {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  margin-left: 170px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #d9dedb;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #777;
+}
+
+.experiment-chart-scale span:last-child {
+  text-align: right;
+}
+
+.experiment-chart-group {
+  padding-top: 22px;
+}
+
+.experiment-chart-group + .experiment-chart-group {
+  margin-top: 22px;
+  border-top: 2px solid var(--black);
+}
+
+.experiment-chart-group-label {
+  margin-bottom: 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #777;
+}
+
+.experiment-chart-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  align-items: center;
+  min-height: 42px;
+}
+
+.experiment-chart-label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.experiment-chart-track {
+  position: relative;
+  height: 24px;
+  background: linear-gradient(to right, #f4f4f4 0 49.8%, transparent 49.8% 50.2%, #f4f4f4 50.2% 100%);
+}
+
+.experiment-chart-zero {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: 50%;
+  width: 2px;
+  background: var(--black);
+}
+
+.experiment-chart-bar {
+  position: absolute;
+  top: 4px;
+  height: 16px;
+  border: 1px solid var(--black);
+}
+
+.experiment-chart-bar.positive {
+  left: 50%;
+  background: #10b981;
+}
+
+.experiment-chart-bar.negative {
+  right: 50%;
+  background: #d8dcda;
+}
+
+.experiment-chart-value {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.experiment-chart-value.positive {
+  left: calc(50% + 10px);
+}
+
+.experiment-chart-value.negative {
+  right: calc(50% + 10px);
+}
+
+.experiment-chart-note {
+  max-width: 820px;
+  margin-top: 28px;
+  padding-left: 18px;
+  border-left: 4px solid #10b981;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
 }
 
 /* Problem/Solution */
@@ -1531,6 +2456,189 @@ input::placeholder, textarea::placeholder {
     display: block;
     margin-right: 0;
     margin-bottom: 4px;
+  }
+
+  .cs-showcase-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .cs-screen {
+    box-shadow: 5px 5px 0 var(--black);
+  }
+
+  .cs-screen-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cs-screen figcaption {
+    display: block;
+  }
+
+  .cs-screen figcaption strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .cs-screen figcaption span {
+    display: block;
+    text-align: left;
+  }
+
+  .rideshare-dashboard-screen {
+    box-shadow: 5px 5px 0 #ed7a32;
+  }
+
+  .rideshare-dashboard-crop {
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .rideshare-dashboard-crop img {
+    width: 135%;
+    max-width: none;
+  }
+
+  .drug-finder-preview {
+    padding: 20px 16px;
+    box-shadow: 5px 5px 0 #8b5cf6;
+  }
+
+  .drug-finder-topbar {
+    display: block;
+  }
+
+  .drug-finder-condition {
+    display: block;
+    margin-top: 18px;
+  }
+
+  .drug-finder-metrics,
+  .drug-finder-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .drug-finder-metrics {
+    gap: 10px;
+  }
+
+  .drug-finder-metrics > div {
+    min-height: 0;
+  }
+
+  .drug-finder-takeaway {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .olist-order-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .olist-order-card {
+    padding: 24px 20px;
+  }
+
+  .olist-comparison-callout {
+    min-height: 130px;
+  }
+
+  .olist-order-card > p {
+    min-height: 0;
+  }
+
+  .olist-recommendation-intro {
+    margin-top: -8px;
+  }
+
+  .funnel-journey {
+    grid-template-columns: 1fr;
+    box-shadow: 5px 5px 0 #facc15;
+  }
+
+  .funnel-path,
+  .funnel-opportunity-panel {
+    padding: 24px 18px;
+  }
+
+  .funnel-stage-copy {
+    display: block;
+  }
+
+  .funnel-stage-copy span,
+  .funnel-stage-copy strong {
+    display: block;
+  }
+
+  .funnel-stage-copy strong {
+    margin-top: 5px;
+  }
+
+  .funnel-cart-outcomes {
+    grid-template-columns: 1fr;
+  }
+
+  .funnel-recommendation-intro {
+    margin-top: -8px;
+  }
+
+  .project-navigation {
+    padding: 48px 0;
+  }
+
+  .project-navigation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-navigation-card {
+    min-height: 128px;
+    padding: 21px;
+    box-shadow: 5px 5px 0 var(--project-accent);
+  }
+
+  .project-navigation-card > strong {
+    font-size: 21px;
+  }
+
+  .project-navigation-card.next {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .experiment-visual-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .experiment-chart {
+    padding: 20px 16px;
+    box-shadow: 5px 5px 0 var(--black);
+  }
+
+  .experiment-chart-scale {
+    margin-left: 0;
+    gap: 8px;
+    font-size: 8px;
+  }
+
+  .experiment-chart-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .experiment-chart-track {
+    height: 30px;
+  }
+
+  .experiment-chart-bar {
+    top: 7px;
+  }
+
+  .experiment-chart-value {
+    font-size: 10px;
   }
 
   .cs-problem-solution {

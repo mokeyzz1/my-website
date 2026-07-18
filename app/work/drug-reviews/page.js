@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import ProjectNavigation from "../ProjectNavigation";
 
 export default function DrugReviewsCaseStudy() {
   return (
@@ -29,7 +30,7 @@ export default function DrugReviewsCaseStudy() {
             <span className="cs-tag" style={{ borderColor: '#8b5cf6', color: '#8b5cf6' }}>Data Science</span>
             <h1 className="cs-title">Drug Reviews NLP</h1>
             <p className="cs-desc">
-              Mining 215,063 patient reviews to identify which medications outperform alternatives — and quantifying the business impact of drug non-adherence.
+              I studied more than 215,000 historical patient reviews to understand which medications people rated highly, where patients repeatedly described poor experiences, and how a comparison tool could make those patterns easier to explore.
             </p>
 
             <div className="cs-meta-row">
@@ -67,19 +68,19 @@ export default function DrugReviewsCaseStudy() {
             <div className="cs-stats-grid">
               <div className="cs-stat">
                 <div className="cs-stat-num">215K+</div>
-                <div className="cs-stat-label">Reviews Analyzed</div>
+                <div className="cs-stat-label">Patient Reviews Studied</div>
               </div>
               <div className="cs-stat">
                 <div className="cs-stat-num">3,436</div>
-                <div className="cs-stat-label">Drugs</div>
+                <div className="cs-stat-label">Medications Covered</div>
               </div>
               <div className="cs-stat">
                 <div className="cs-stat-num">885</div>
-                <div className="cs-stat-label">Conditions</div>
+                <div className="cs-stat-label">Health Conditions</div>
               </div>
               <div className="cs-stat">
                 <div className="cs-stat-num">$27M+</div>
-                <div className="cs-stat-label">Revenue Risk Identified</div>
+                <div className="cs-stat-label">Estimated Revenue Risk</div>
               </div>
             </div>
           </div>
@@ -93,16 +94,85 @@ export default function DrugReviewsCaseStudy() {
               <div className="cs-block">
                 <h3>The Question</h3>
                 <p>
-                  Patients frequently switch or stop medications due to dissatisfaction. Which drugs significantly underperform their alternatives, and what&apos;s the financial impact of this non-adherence?
+                  People taking medications for the same condition can report very different experiences. I wanted to know whether patient reviews could reveal where those differences were largest and make better-rated alternatives easier to find.
                 </p>
               </div>
               <div className="cs-block">
-                <h3>The Approach</h3>
+                <h3>What I Did</h3>
                 <p>
-                  Combined SQL analysis, NLP sentiment extraction, and topic modeling on 215K patient reviews from Drugs.com (2008-2017) to surface rating gaps, sentiment discrepancies, and recurring side effect themes.
+                  I organized reviews collected from 2008 to 2017, compared medications used for the same condition, and looked for repeated concerns in the written feedback. Then I built an interactive tool that lets someone explore those patterns without reading thousands of reviews.
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Product Preview */}
+        <section className="cs-section drug-finder-showcase">
+          <div className="container">
+            <div className="cs-showcase-heading">
+              <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>
+                Making Thousands of Reviews Easier to Compare
+              </h2>
+              <p>
+                Instead of presenting a wall of analysis, the tool starts with one condition and shows how patient ratings differ across the medications used to treat it.
+              </p>
+            </div>
+
+            <div className="drug-finder-preview">
+              <div className="drug-finder-topbar">
+                <div>
+                  <span className="drug-finder-kicker">Historical patient review data</span>
+                  <h3>Drug Alternative Finder</h3>
+                </div>
+                <span className="drug-finder-condition">Condition: Depression</span>
+              </div>
+
+              <div className="drug-finder-metrics">
+                <div>
+                  <strong>11,640</strong>
+                  <span>patient reviews</span>
+                </div>
+                <div>
+                  <strong>50</strong>
+                  <span>medications compared</span>
+                </div>
+                <div>
+                  <strong>4.7 points</strong>
+                  <span>between the highest and lowest average ratings</span>
+                </div>
+              </div>
+
+              <div className="drug-finder-comparison">
+                <div className="drug-rating-card higher">
+                  <div className="drug-rating-copy">
+                    <span>Highest average patient rating</span>
+                    <strong>9.4 <small>/ 10</small></strong>
+                  </div>
+                  <div className="drug-rating-track" aria-hidden="true">
+                    <span style={{ width: '94%' }}></span>
+                  </div>
+                </div>
+                <div className="drug-rating-card lower">
+                  <div className="drug-rating-copy">
+                    <span>Lowest average patient rating</span>
+                    <strong>4.7 <small>/ 10</small></strong>
+                  </div>
+                  <div className="drug-rating-track" aria-hidden="true">
+                    <span style={{ width: '47%' }}></span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="drug-finder-takeaway">
+                <strong>Why this matters</strong>
+                <p>The large gap shows where patients reported very different experiences with medications used for the same condition. It creates a useful starting point for questions, not a medical recommendation.</p>
+              </div>
+            </div>
+
+            <p className="drug-finder-disclaimer">
+              Based on historical patient reviews from 2008–2017. For informational analysis only; medication decisions should be made with a healthcare professional.
+            </p>
           </div>
         </section>
 
@@ -112,129 +182,129 @@ export default function DrugReviewsCaseStudy() {
             <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>Key Findings</h2>
             <div className="cs-features">
               <div className="cs-feature" style={{ '--hover-color': '#8b5cf6' }}>
-                <h3>5+ Point Rating Gap</h3>
-                <p>Found systematic performance gaps between best and worst drugs within the same conditions — some patients getting significantly worse care.</p>
+                <h3>Ratings Varied Widely Within the Same Condition</h3>
+                <p>For several common conditions, the highest- and lowest-rated medications were separated by five points or more on a ten-point scale.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': '#8b5cf6' }}>
-                <h3>8 Underperforming Conditions</h3>
-                <p>Identified conditions with average ratings below 6.0, indicating systematic unmet patient needs across multiple medications.</p>
+                <h3>Eight Conditions Had Consistently Low Ratings</h3>
+                <p>Across these conditions, the average patient rating stayed below 6 out of 10, suggesting repeated dissatisfaction rather than one poorly rated medication.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': '#8b5cf6' }}>
-                <h3>Birth Control: 18% of Reviews</h3>
-                <p>Highest volume category despite below-average satisfaction — a major opportunity for pharmaceutical improvement.</p>
+                <h3>Birth Control Generated the Most Feedback</h3>
+                <p>It represented 18% of all reviews but still received below-average ratings, making it one of the clearest areas for deeper research and product improvement.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': '#8b5cf6' }}>
-                <h3>Sentiment vs Rating Mismatch</h3>
-                <p>VADER analysis revealed reviews where explicit ratings didn&apos;t match expressed sentiment — hidden dissatisfaction signals.</p>
+                <h3>Written Feedback Added Context to the Score</h3>
+                <p>Some people selected a high rating while still describing concerns in their written review. Reading both signals helped surface dissatisfaction that a score alone could miss.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Methodology - Horizontal Flow */}
+        {/* Process - Horizontal Flow */}
         <section className="cs-section cs-section-dark">
           <div className="container">
-            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': '#8b5cf6' }}>Methodology</h2>
+            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': '#8b5cf6' }}>How I Worked Through It</h2>
 
             <div className="cs-flow">
               <div className="cs-flow-group">
-                <div className="cs-flow-label">Data</div>
+                <div className="cs-flow-label">Start</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">UCI Dataset</div>
-                  <div className="cs-flow-detail">215K reviews</div>
+                  <div className="cs-flow-title">Patient reviews</div>
+                  <div className="cs-flow-detail">215K experiences</div>
                 </div>
               </div>
 
               <span className="cs-flow-arrow" style={{ color: '#8b5cf6' }}>→</span>
 
               <div className="cs-flow-group">
-                <div className="cs-flow-label">SQL Analysis</div>
+                <div className="cs-flow-label">Organize</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">SQLite</div>
-                  <div className="cs-flow-detail">Rankings & trends</div>
+                  <div className="cs-flow-title">Group the data</div>
+                  <div className="cs-flow-detail">By condition and medication</div>
                 </div>
               </div>
 
               <span className="cs-flow-arrow" style={{ color: '#8b5cf6' }}>→</span>
 
               <div className="cs-flow-group">
-                <div className="cs-flow-label">NLP</div>
+                <div className="cs-flow-label">Compare</div>
                 <div className="cs-flow-box" style={{ background: '#8b5cf6', borderColor: '#8b5cf6', color: '#000' }}>
-                  <div className="cs-flow-title">VADER + TF-IDF</div>
-                  <div className="cs-flow-detail" style={{ color: '#000', opacity: 0.7 }}>Sentiment & topics</div>
+                  <div className="cs-flow-title">Ratings and words</div>
+                  <div className="cs-flow-detail" style={{ color: '#000', opacity: 0.7 }}>Find repeated patterns</div>
                 </div>
               </div>
 
               <span className="cs-flow-arrow" style={{ color: '#8b5cf6' }}>→</span>
 
               <div className="cs-flow-group">
-                <div className="cs-flow-label">Insights</div>
+                <div className="cs-flow-label">Understand</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">Findings</div>
-                  <div className="cs-flow-detail">$27M impact</div>
+                  <div className="cs-flow-title">Find the gaps</div>
+                  <div className="cs-flow-detail">See where experiences differ</div>
                 </div>
               </div>
 
               <span className="cs-flow-arrow" style={{ color: '#8b5cf6' }}>→</span>
 
               <div className="cs-flow-group">
-                <div className="cs-flow-label">Product</div>
+                <div className="cs-flow-label">Share</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">Streamlit</div>
-                  <div className="cs-flow-detail">Dashboard</div>
+                  <div className="cs-flow-title">Comparison tool</div>
+                  <div className="cs-flow-detail">Make findings explorable</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Technical Highlights */}
+        {/* Work Behind the Findings */}
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>Technical Highlights</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>The Work Behind the Findings</h2>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
                 <span className="cs-challenge-num" style={{ background: '#8b5cf6' }}>1</span>
-                Sentiment Analysis at Scale
+                Reading More Than the Rating
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Approach</span>
-                <span className="cs-challenge-text">Applied VADER sentiment analysis across 215K reviews to extract polarity scores and compare against explicit 1-10 ratings.</span>
+                <span className="cs-challenge-label">What I did</span>
+                <span className="cs-challenge-text">I compared each person&apos;s written feedback with the score they selected. This made it possible to flag reviews where the words sounded much more negative than the rating suggested.</span>
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Insight</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>Found significant rating-sentiment mismatches revealing hidden patient dissatisfaction</span>
+                <span className="cs-challenge-label">Why it mattered</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>It uncovered concerns that would have been missed if the analysis only looked at the numeric rating.</span>
               </div>
             </div>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
                 <span className="cs-challenge-num" style={{ background: '#8b5cf6' }}>2</span>
-                Topic Modeling for Side Effects
+                Finding Repeated Patient Concerns
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Approach</span>
-                <span className="cs-challenge-text">Used TF-IDF vectorization with NMF (Non-negative Matrix Factorization) to extract recurring themes from negative reviews.</span>
+                <span className="cs-challenge-label">What I did</span>
+                <span className="cs-challenge-text">I grouped commonly repeated words and phrases in negative reviews to see which concerns appeared again and again across medications and conditions.</span>
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Insight</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>Surfaced common side effect complaints and unmet patient needs by condition</span>
+                <span className="cs-challenge-label">Why it mattered</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>It turned thousands of individual comments into a clearer picture of the issues patients mentioned most often.</span>
               </div>
             </div>
 
             <div className="cs-challenge-card">
               <div className="cs-challenge-title">
                 <span className="cs-challenge-num" style={{ background: '#8b5cf6' }}>3</span>
-                Business Impact Quantification
+                Connecting Patient Experience to Business Risk
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Approach</span>
-                <span className="cs-challenge-text">Combined rating data with market research on drug adherence costs and patient switching behavior.</span>
+                <span className="cs-challenge-label">What I did</span>
+                <span className="cs-challenge-text">I combined review patterns with outside research about medication discontinuation to estimate how poor patient experiences could affect continued use and revenue.</span>
               </div>
               <div className="cs-challenge-row">
-                <span className="cs-challenge-label">Insight</span>
-                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>Estimated $27M+ in revenue risk from preventable non-adherence</span>
+                <span className="cs-challenge-label">Why it mattered</span>
+                <span className="cs-challenge-text cs-challenge-result" style={{ color: '#8b5cf6' }}>The model estimated more than $27M in potential revenue risk, while making the assumptions and need for further validation clear.</span>
               </div>
             </div>
           </div>
@@ -243,9 +313,9 @@ export default function DrugReviewsCaseStudy() {
         {/* Dashboard */}
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>The Dashboard</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': '#8b5cf6' }}>Explore the Full Tool</h2>
             <p style={{ fontSize: '17px', lineHeight: 1.7, maxWidth: '700px', marginBottom: '32px' }}>
-              Built a Streamlit app (&quot;Drug Alternative Finder&quot;) that lets users explore the data — compare drugs within conditions, view rating distributions, and surface better-rated alternatives.
+              The interactive version lets visitors choose a condition, compare patient ratings across medications, review commonly mentioned concerns, and read examples of positive and critical feedback.
             </p>
             <a
               href="https://mokeyzz1-drug-reviews-nlp-app-d9dls4.streamlit.app"
@@ -257,10 +327,10 @@ export default function DrugReviewsCaseStudy() {
               Try the Live App ↗
             </a>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Condition-based filtering</span>
-              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Drug comparison charts</span>
-              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Rating distributions</span>
-              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Alternative recommendations</span>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Choose a condition</span>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Compare patient ratings</span>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Review common concerns</span>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '13px', background: '#fff', border: '2px solid #000', padding: '10px 16px' }}>Read sample feedback</span>
             </div>
           </div>
         </section>
@@ -285,6 +355,8 @@ export default function DrugReviewsCaseStudy() {
             </div>
           </div>
         </section>
+
+        <ProjectNavigation current="drug-reviews" />
 
         {/* Footer */}
         <footer className="footer">

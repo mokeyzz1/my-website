@@ -5,6 +5,8 @@ const routes = [
   "/contact",
   "/work/athletedesk",
   "/work/drug-reviews",
+  "/work/ecommerce-funnel",
+  "/work/olist-analysis",
   "/work/rideshare-ops-intelligence",
   "/work/saas-ab-test-onboarding",
   "/work/trackhub",
