@@ -7,6 +7,14 @@ export default function Home() {
 
   const projects = [
     {
+      slug: "course-rag-assistant",
+      title: "Course RAG Assistant",
+      category: "product",
+      desc: "A source-grounded course workspace that turns a student's own documents into cited answers, deadline summaries, study reviews, and assignment checklists.",
+      tech: ["Next.js", "OpenAI", "Pinecone", "TypeScript"],
+      link: "https://course-rag-assistant.vercel.app",
+    },
+    {
       slug: "athletedesk",
       title: "AthleteDesk",
       category: "product",
