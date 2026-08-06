@@ -138,6 +138,33 @@ export default function CourseRagCaseStudy() {
           </div>
         </section>
 
+        <section className="cs-section">
+          <div className="container">
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>How it works under the hood</h2>
+            <p style={{ maxWidth: '760px', marginBottom: '40px', fontSize: '17px', lineHeight: 1.7 }}>
+              The interface stays simple for the student, but the answer still has a deliberate path behind it. I built the system so the source, retrieval step, and evidence remain inspectable.
+            </p>
+            <div className="cs-features">
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
+                <h3>Ingest the material</h3>
+                <p>Parse PDF, DOCX, TXT, Markdown, or pasted text, then report unreadable files instead of silently indexing an empty document.</p>
+              </div>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
+                <h3>Preserve where it came from</h3>
+                <p>Split documents into boundary-aware chunks while keeping source name, page metadata, character range, and chunk order attached.</p>
+              </div>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
+                <h3>Retrieve before answering</h3>
+                <p>Embed the question, search the course-specific Pinecone namespace, and pass the most relevant chunks into answer generation.</p>
+              </div>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
+                <h3>Cite or say it cannot verify</h3>
+                <p>Return inline citations and an evidence drawer for supported claims, while surfacing missing or ambiguous information instead of guessing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
             <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Ways a student can use it</h2>
