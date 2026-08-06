@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ProjectNavigation from "../ProjectNavigation";
 
-const accent = "#06b6d4";
+const accent = "#ec4899";
 
 export default function CourseRagCaseStudy() {
   return (
