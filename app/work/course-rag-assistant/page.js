@@ -30,7 +30,7 @@ export default function CourseRagCaseStudy() {
             <span className="cs-tag" style={{ borderColor: accent, color: accent }}>Applied AI · RAG</span>
             <h1 className="cs-title">Course RAG Assistant</h1>
             <p className="cs-desc">
-              A source-grounded course workspace that helps students work from the material they already have. Upload a syllabus, assignment, rubric, or notes, then ask a real question and open the evidence behind the answer.
+              A source-grounded course workspace for the moments when the answer is somewhere in your syllabus, rubric, notes, or assignment—but you should not have to search for it all over again.
             </p>
 
             <div className="cs-meta-row">
@@ -62,6 +62,20 @@ export default function CourseRagCaseStudy() {
           </div>
         </section>
 
+        <section className="cs-section" style={{ background: accent }}>
+          <div className="container">
+            <h2 className="cs-section-title" style={{ color: '#000', '--title-color': accentInk }}>The moment it clicked</h2>
+            <div className="cs-story">
+              <p>
+                When I was a student, the hard part was not always understanding the work. It was remembering where the information lived: a deadline in the syllabus, requirements in a rubric, and the details of an assignment in a separate document.
+              </p>
+              <p>
+                A student should be able to upload the material they already have, ask the question that is actually on their mind, and leave with a clear next step—not another generic chat response.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="cs-section">
           <div className="container">
             <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Overview</h2>
@@ -84,62 +98,65 @@ export default function CourseRagCaseStudy() {
 
         <section className="cs-section cs-section-dark">
           <div className="container">
-            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': accent }}>How the RAG pipeline works</h2>
+            <h2 className="cs-section-title" style={{ color: '#fff', '--title-color': accent }}>From scattered material to a next step</h2>
             <div className="cs-flow">
               <div className="cs-flow-group">
                 <div className="cs-flow-label">01 · Add</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">Course material</div>
-                  <div className="cs-flow-detail">PDF, DOCX, TXT, Markdown, or pasted text</div>
+                  <div className="cs-flow-title">Your material</div>
+                  <div className="cs-flow-detail">Syllabus, rubric, notes, or assignment</div>
                 </div>
               </div>
               <span className="cs-flow-arrow" style={{ color: accent }}>→</span>
               <div className="cs-flow-group">
-                <div className="cs-flow-label">02 · Prepare</div>
+                <div className="cs-flow-label">02 · Ask</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">Parse + chunk</div>
-                  <div className="cs-flow-detail">Preserve source and page metadata</div>
+                  <div className="cs-flow-title">The question in front of you</div>
+                  <div className="cs-flow-detail">A deadline, requirement, concept, or quiz</div>
                 </div>
               </div>
               <span className="cs-flow-arrow" style={{ color: accent }}>→</span>
               <div className="cs-flow-group">
-                <div className="cs-flow-label">03 · Retrieve</div>
+                <div className="cs-flow-label">03 · Choose</div>
                 <div className="cs-flow-box" style={{ background: accent, borderColor: accent, color: '#000' }}>
-                  <div className="cs-flow-title">Vector search</div>
-                  <div className="cs-flow-detail" style={{ color: '#000', opacity: 0.7 }}>OpenAI embeddings + Pinecone</div>
+                  <div className="cs-flow-title">The right kind of help</div>
+                  <div className="cs-flow-detail" style={{ color: '#000', opacity: 0.7 }}>Answer, checklist, dates, or study review</div>
                 </div>
               </div>
               <span className="cs-flow-arrow" style={{ color: accent }}>→</span>
               <div className="cs-flow-group">
-                <div className="cs-flow-label">04 · Answer</div>
+                <div className="cs-flow-label">04 · Verify</div>
                 <div className="cs-flow-box">
-                  <div className="cs-flow-title">Grounded response</div>
-                  <div className="cs-flow-detail">Answer, citations, and evidence drawer</div>
+                  <div className="cs-flow-title">A usable answer</div>
+                  <div className="cs-flow-detail">Source text, evidence, and a clear next step</div>
                 </div>
               </div>
             </div>
+            <p style={{ maxWidth: '760px', marginTop: '28px', color: '#aaa', fontSize: '14px', lineHeight: 1.7 }}>
+              Under the hood, the material is parsed, retrieved, and matched to the question. The student experience stays focused on what to do next.
+            </p>
           </div>
         </section>
 
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>What the assistant can do</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Ways a student can use it</h2>
             <div className="cs-features">
               <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Answer the question in front of you</h3>
-                <p>Ask about a deadline, a quiz format, a concept, or a specific assignment. The answer stays inside the indexed course sources.</p>
+                <p>“Is the quiz multiple choice?” “How long should the research paper be?” The answer stays inside the course sources.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Turn a rubric into a checklist</h3>
-                <p>Assignment mode separates deliverables, requirements, grading priorities, and questions that still need instructor clarification.</p>
+                <p>See what to submit, what the rubric prioritizes, and what still needs clarification before starting the assignment.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Make study material actionable</h3>
-                <p>Study mode organizes retrieved ideas and creates self-test prompts instead of returning another undifferentiated summary.</p>
+                <p>Turn the material into focused review prompts instead of another undifferentiated summary.</p>
               </div>
               <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Show the evidence</h3>
-                <p>Inline citations open the exact retrieved chunk, source name, page metadata when available, and character range used to ground the answer.</p>
+                <p>Open the source behind the answer so you can verify the requirement before relying on it.</p>
               </div>
             </div>
           </div>
@@ -171,11 +188,31 @@ export default function CourseRagCaseStudy() {
           </div>
         </section>
 
+        <section className="cs-section" style={{ background: '#fefae0' }}>
+          <div className="container">
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Useful after the answer</h2>
+            <div className="cs-problem-solution">
+              <div className="cs-block">
+                <h3>What exists today</h3>
+                <p>
+                  The assistant can pull deadlines, requirements, and study material into focused tools so a student does not have to keep reopening the same documents.
+                </p>
+              </div>
+              <div className="cs-block">
+                <h3>Where it can go next</h3>
+                <p>
+                  A future course plan could let students save selected dates and tasks, then export them to the calendar or planner they already use. The important part is making the output portable—not forcing another place to manage school.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>What I learned</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Designing for trust</h2>
             <p style={{ fontSize: '17px', lineHeight: 1.7, maxWidth: '760px', marginBottom: '32px' }}>
-              The hard part was not connecting a language model to a vector database. It was deciding when the assistant should act, what it should refuse to invent, and how a student can verify the answer without leaving the flow. The result is a small RAG product with a clear boundary: the student brings the source, retrieval finds the relevant context, and the interface makes the evidence visible.
+              The assistant should make course material easier to use without pretending to replace it. That means starting with the student&apos;s own sources, giving them different ways to work, and making the evidence visible whenever an answer matters.
             </p>
             <a className="brutal-btn primary" href="https://course-rag-assistant.vercel.app" target="_blank" rel="noopener noreferrer">
               Try the live demo →
