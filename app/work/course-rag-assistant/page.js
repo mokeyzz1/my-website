@@ -62,29 +62,6 @@ export default function CourseRagCaseStudy() {
           </div>
         </section>
 
-        <section className="cs-stats-banner" style={{ background: accent }}>
-          <div className="container">
-            <div className="cs-stats-grid">
-              <div className="cs-stat">
-                <div className="cs-stat-num">4</div>
-                <div className="cs-stat-label">Document formats</div>
-              </div>
-              <div className="cs-stat">
-                <div className="cs-stat-num">1</div>
-                <div className="cs-stat-label">Cited answer path</div>
-              </div>
-              <div className="cs-stat">
-                <div className="cs-stat-num">3</div>
-                <div className="cs-stat-label">Student workflows</div>
-              </div>
-              <div className="cs-stat">
-                <div className="cs-stat-num">0</div>
-                <div className="cs-stat-label">Accounts required</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="cs-section">
           <div className="container">
             <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Overview</h2>
