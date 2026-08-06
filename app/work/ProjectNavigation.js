@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const projects = [
-  { slug: "course-rag-assistant", title: "Course RAG Assistant", accent: "#ec4899" },
+  { slug: "course-rag-assistant", title: "Course RAG Assistant", accent: "#e11d48" },
   { slug: "athletedesk", title: "AthleteDesk", accent: "#f59e0b" },
   { slug: "trackhub", title: "TrackHub", accent: "#00d4ff" },
   { slug: "saas-ab-test-onboarding", title: "B2B SaaS Onboarding Experiment", accent: "#10b981" },
