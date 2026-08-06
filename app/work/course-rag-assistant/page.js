@@ -1,7 +1,8 @@
 import Link from "next/link";
 import ProjectNavigation from "../ProjectNavigation";
 
-const accent = "#e11d48";
+const accent = "#fefae0";
+const accentInk = "#7f1d1d";
 
 export default function CourseRagCaseStudy() {
   return (
@@ -86,7 +87,7 @@ export default function CourseRagCaseStudy() {
 
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': accent }}>Overview</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Overview</h2>
             <div className="cs-problem-solution">
               <div className="cs-block">
                 <h3>The Problem</h3>
@@ -145,21 +146,21 @@ export default function CourseRagCaseStudy() {
 
         <section className="cs-section" style={{ background: '#f5f5f5' }}>
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': accent }}>What the assistant can do</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>What the assistant can do</h2>
             <div className="cs-features">
-              <div className="cs-feature" style={{ '--hover-color': accent }}>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Answer the question in front of you</h3>
                 <p>Ask about a deadline, a quiz format, a concept, or a specific assignment. The answer stays inside the indexed course sources.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': accent }}>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Turn a rubric into a checklist</h3>
                 <p>Assignment mode separates deliverables, requirements, grading priorities, and questions that still need instructor clarification.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': accent }}>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Make study material actionable</h3>
                 <p>Study mode organizes retrieved ideas and creates self-test prompts instead of returning another undifferentiated summary.</p>
               </div>
-              <div className="cs-feature" style={{ '--hover-color': accent }}>
+              <div className="cs-feature" style={{ '--hover-color': accentInk }}>
                 <h3>Show the evidence</h3>
                 <p>Inline citations open the exact retrieved chunk, source name, page metadata when available, and character range used to ground the answer.</p>
               </div>
@@ -171,8 +172,8 @@ export default function CourseRagCaseStudy() {
           <div className="container">
             <div className="cs-showcase-heading">
               <div>
-                <span className="experiment-eyebrow" style={{ color: accent }}>The experience</span>
-                <h2 className="cs-section-title" style={{ '--title-color': accent }}>Material first. Then the right tool.</h2>
+                <span className="experiment-eyebrow" style={{ color: accentInk }}>The experience</span>
+                <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>Material first. Then the right tool.</h2>
               </div>
               <p>The sample course lets someone try the complete path in one click. Their own files use the same pipeline.</p>
             </div>
@@ -195,7 +196,7 @@ export default function CourseRagCaseStudy() {
 
         <section className="cs-section">
           <div className="container">
-            <h2 className="cs-section-title" style={{ '--title-color': accent }}>What I learned</h2>
+            <h2 className="cs-section-title" style={{ '--title-color': accentInk }}>What I learned</h2>
             <p style={{ fontSize: '17px', lineHeight: 1.7, maxWidth: '760px', marginBottom: '32px' }}>
               The hard part was not connecting a language model to a vector database. It was deciding when the assistant should act, what it should refuse to invent, and how a student can verify the answer without leaving the flow. The result is a small RAG product with a clear boundary: the student brings the source, retrieval finds the relevant context, and the interface makes the evidence visible.
             </p>
